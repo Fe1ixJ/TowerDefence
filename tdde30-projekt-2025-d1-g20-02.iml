@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="tddd78-annotations" level="project" />
+    <orderEntry type="library" name="tddd78-annotations2" level="project" />
+    <orderEntry type="library" name="json-simple-1.1.1" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../tdde30-labbar-2025-d1-g02-05/libs/gson" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../tdde30-labbar-2025-d1-g02-05/libs/gson" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../tdde30-labbar-2025-d1-g02-05/libs/gson" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../tdde30-labbar-2025-d1-g02-05/libs/gson" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+  </component>
+</module>

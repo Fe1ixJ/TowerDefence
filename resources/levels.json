@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Level 1",
+    "waveCooldown": 1000,
+    "waves": [
+      {
+        "enemyType": "BASIC",
+        "count": 50,
+        "spawnDelay": 10
+      },
+      {
+        "enemyType": "TANK",
+        "count": 0,
+        "spawnDelay": 2000
+      },
+      {
+        "enemyType": "FAST",
+        "count": 0,
+        "spawnDelay": 500
+      }
+    ]
+  },
+  {
+    "name": "Level 2",
+    "waveCooldown": 1000,
+    "waves": [
+      {
+        "enemyType": "TANK",
+        "count": 2,
+        "spawnDelay": 500
+      },
+      {
+        "enemyType": "BASIC",
+        "count": 2,
+        "spawnDelay": 2000
+      },
+      {
+        "enemyType": "FAST",
+        "count": 2,
+        "spawnDelay": 500
+      }
+    ]
+  }
+]
