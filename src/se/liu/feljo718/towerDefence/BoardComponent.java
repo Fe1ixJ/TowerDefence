@@ -5,9 +5,25 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * A visual representation of the Tower Defense game board.
+ * <p>
+ * This component handles rendering of the game map, towers, enemies, and UI controls.
+ * It also manages user interactions such as tower placement and selection.
+ * <p>
+ * The component implements BoardListener to receive updates from the game board
+ * and refresh the display when the game state changes.
+ *
+ * @author feljo718
+ * @see Board
+ * @see BoardListener
+ */
 public class BoardComponent extends JComponent implements BoardListener {
+    /** The size of each game board tile in pixels. */
     public static final int TILE_SIZE = 40;
+    /** The size of enemy sprites in pixels. */
     public static final int ENEMY_SIZE = 30;
+    /** The size of tower sprites in pixels. */
     public static final int TOWER_SIZE = 30;
     private final Board board;
     private final JLabel livesLabel;
@@ -76,6 +92,13 @@ public class BoardComponent extends JComponent implements BoardListener {
         });
     }
 
+    /**
+     * Creates a tower placement UI when the shop is accessed.
+     * <p>
+     * Opens a dialog allowing the user to select a tower type to purchase.
+     * If a tower is selected, enters tower placement mode where the cursor
+     * changes to a crosshair until the tower is placed or the action canceled.
+     */
     private void showTowerShop() {
         TowerShop shop = new TowerShop(
                 (JFrame) SwingUtilities.getWindowAncestor(this), board);
@@ -89,6 +112,16 @@ public class BoardComponent extends JComponent implements BoardListener {
         }
     }
 
+    /**
+     * Places a tower at the specified pixel coordinates on the board.
+     * <p>
+     * Converts pixel coordinates to board grid coordinates and attempts to place
+     * the currently selected tower. The tower is only placed if the target tile
+     * is a valid placement location (grass) and the player has sufficient coins.
+     *
+     * @param x The x-coordinate in pixels where the tower should be placed
+     * @param y The y-coordinate in pixels where the tower should be placed
+     */
     private void placeTower(int x, int y) {
         int col = x / TILE_SIZE;
         int row = y / TILE_SIZE;
@@ -112,6 +145,16 @@ public class BoardComponent extends JComponent implements BoardListener {
         };
     }
 
+    /**
+     * Locates a tower at the specified pixel coordinates.
+     * <p>
+     * Converts pixel coordinates to board grid coordinates and checks if
+     * any tower is positioned at that location.
+     *
+     * @param x The x-coordinate in pixels
+     * @param y The y-coordinate in pixels
+     * @return The tower at the specified position, or null if no tower exists there
+     */
     private Tower getTowerAt(int x, int y) {
         int col = x / TILE_SIZE;
         int row = y / TILE_SIZE;
@@ -126,6 +169,20 @@ public class BoardComponent extends JComponent implements BoardListener {
         return null;
     }
 
+    /**
+     * Renders the game board, towers, enemies and UI elements.
+     * <p>
+     * This method handles the complete visual rendering of the game state, including:
+     * <ul>
+     *   <li>The tile grid with different terrain types</li>
+     *   <li>All active enemies with appropriate colors based on type</li>
+     *   <li>All placed towers</li>
+     *   <li>Tower range indicators (when enabled)</li>
+     *   <li>Grid lines for visual clarity</li>
+     * </ul>
+     *
+     * @param g The Graphics object used for drawing
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -159,11 +216,20 @@ public class BoardComponent extends JComponent implements BoardListener {
 
         // Draw towers
         for (Tower tower : board.getTowerFactory().getTowers()) {
-            Point pos = tower.getPosition();
-            g2d.setColor(tower.getColor());
-            int x = pos.x * TILE_SIZE + (TILE_SIZE - TOWER_SIZE) / 2;
-            int y = pos.y * TILE_SIZE + (TILE_SIZE - TOWER_SIZE) / 2;
-            g2d.fillRect(x, y, TOWER_SIZE, TOWER_SIZE);
+            int tileSize = getSize().width / board.getWidth();
+            int x = tower.getPosition().x * tileSize;
+            int y = tower.getPosition().y * tileSize;
+
+            // Draw the base tower
+            g.setColor(tower.getColor());
+            g.fillRect(x + tileSize/4, y + tileSize/4, tileSize/2, tileSize/2);
+
+            // Draw a glowing effect for towers with active powerups
+            if (!tower.getActivePowerups().isEmpty()) {
+                g.setColor(new Color(255, 255, 0, 100)); // Semi-transparent yellow
+                g.fillOval(x, y, tileSize, tileSize);
+            }
+
         }
 
 
@@ -200,6 +266,12 @@ public class BoardComponent extends JComponent implements BoardListener {
         return new Dimension(board.getWidth() * TILE_SIZE, board.getHeight() * TILE_SIZE);
     }
 
+    /**
+     * Handles updates when the board state changes.
+     * <p>
+     * Updates UI labels to display current lives, coins and round information,
+     * then triggers a repaint of the component to reflect visual changes.
+     */
     @Override
     public void boardChanged() {
         livesLabel.setText("Lives: " + board.getLives());

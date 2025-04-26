@@ -1,43 +1,158 @@
 [
   {
-    "name": "Level 1",
-    "waveCooldown": 1000,
+    "name": "Tutorial",
+    "waveCooldown": 3000,
     "waves": [
       {
         "enemyType": "BASIC",
-        "count": 50,
-        "spawnDelay": 10
-      },
+        "count": 10,
+        "spawnDelay": 1000
+      }
+    ]
+  },
+  {
+    "name": "First Challenge",
+    "waveCooldown": 5000,
+    "waves": [
       {
-        "enemyType": "TANK",
-        "count": 0,
-        "spawnDelay": 2000
+        "enemyType": "BASIC",
+        "count": 15,
+        "spawnDelay": 800
       },
       {
         "enemyType": "FAST",
-        "count": 0,
+        "count": 5,
+        "spawnDelay": 600
+      }
+    ]
+  },
+  {
+    "name": "Mixed Threat",
+    "waveCooldown": 6000,
+    "waves": [
+      {
+        "enemyType": "BASIC",
+        "count": 20,
+        "spawnDelay": 700
+      },
+      {
+        "enemyType": "FAST",
+        "count": 10,
+        "spawnDelay": 500
+      },
+      {
+        "enemyType": "TANK",
+        "count": 3,
+        "spawnDelay": 2000
+      }
+    ]
+  },
+  {
+    "name": "Tank Brigade",
+    "waveCooldown": 8000,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 15,
+        "spawnDelay": 400
+      },
+      {
+        "enemyType": "TANK",
+        "count": 8,
+        "spawnDelay": 1500
+      },
+      {
+        "enemyType": "BASIC",
+        "count": 25,
         "spawnDelay": 500
       }
     ]
   },
   {
-    "name": "Level 2",
-    "waveCooldown": 1000,
+    "name": "Speed Demons",
+    "waveCooldown": 10000,
     "waves": [
       {
-        "enemyType": "TANK",
-        "count": 2,
-        "spawnDelay": 500
+        "enemyType": "FAST",
+        "count": 30,
+        "spawnDelay": 300
       },
       {
         "enemyType": "BASIC",
-        "count": 2,
-        "spawnDelay": 2000
+        "count": 15,
+        "spawnDelay": 600
+      },
+      {
+        "enemyType": "TANK",
+        "count": 5,
+        "spawnDelay": 1200
       },
       {
         "enemyType": "FAST",
-        "count": 2,
-        "spawnDelay": 500
+        "count": 20,
+        "spawnDelay": 200
+      }
+    ]
+  },
+  {
+    "name": "Overwhelming Force",
+    "waveCooldown": 12000,
+    "waves": [
+      {
+        "enemyType": "BASIC",
+        "count": 40,
+        "spawnDelay": 400
+      },
+      {
+        "enemyType": "TANK",
+        "count": 15,
+        "spawnDelay": 1000
+      },
+      {
+        "enemyType": "FAST",
+        "count": 25,
+        "spawnDelay": 300
+      },
+      {
+        "enemyType": "TANK",
+        "count": 10,
+        "spawnDelay": 800
+      },
+      {
+        "enemyType": "BASIC",
+        "count": 30,
+        "spawnDelay": 200
+      }
+    ]
+  },
+  {
+    "name": "Final Assault",
+    "waveCooldown": 15000,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 40,
+        "spawnDelay": 200
+      },
+      {
+        "enemyType": "TANK",
+        "count": 25,
+        "spawnDelay": 800
+      },
+      {
+        "enemyType": "BASIC",
+        "count": 50,
+        "spawnDelay": 300
+      },
+      {
+        "enemyType": "TANK",
+        "count": 15,
+        "spawnDelay": 600
+      },
+      {
+        "enemyType": "FAST",
+        "count": 35,
+        "spawnDelay": 150
       }
     ]
   }

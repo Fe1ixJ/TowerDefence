@@ -4,6 +4,18 @@ import java.awt.*;
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+ * Manages the creation and operation of defensive towers in the Tower Defense game.
+ * <p>
+ * This class handles the placement of towers on the game board, manages the collection
+ * of active towers, and coordinates tower attacks against enemies. Each tower operates
+ * independently based on its type, range, and attack patterns.
+ *
+ * @author feljo718
+ * @see Tower
+ * @see TowerType
+ * @see Board
+ */
 public class TowerFactory {
     private final Board board;
     private final List<Tower> towers;
@@ -15,10 +27,22 @@ public class TowerFactory {
         this.gameTime = 0;
     }
 
+    /**
+     * Updates all towers for one game tick.
+     * <p>
+     * Increments the game time and checks each tower to see if it can attack.
+     * Handles different attack patterns based on tower types - splash towers
+     * affect multiple enemies, while other towers target individual enemies.
+     */
     public void tick() {
         gameTime += 0.017;  // Simulate a frame time of 17ms (60 FPS)
         List<Enemy> enemies = board.getEnemyFactory().getEnemies();
+
+        // Update each tower and handle powerups
         for (Tower tower : towers) {
+            // Refresh powerups list to remove expired powerups
+            tower.getActivePowerups();
+
             if (tower.canShoot(gameTime)) {
                 if (tower.getType() == TowerType.SPLASH) {
                     if (!enemies.isEmpty()) {
@@ -39,6 +63,15 @@ public class TowerFactory {
         }
     }
 
+    /**
+     * Attempts to place a new tower of the specified type at the given position.
+     * <p>
+     * Validates that the position is valid for tower placement before creating
+     * the tower. A tower can only be placed on grass tiles.
+     *
+     * @param type     The type of tower to place
+     * @param position The position on the board where the tower should be placed
+     */
     public void placeTower(TowerType type, Point position) {
         if (canPlaceTower(position)) {
             Tower tower = new Tower(type, position);
@@ -47,6 +80,15 @@ public class TowerFactory {
         }
     }
 
+    /**
+     * Determines if a tower can be placed at the specified position.
+     * <p>
+     * Checks that the position is within the board boundaries and that
+     * the tile at that position is a grass tile (valid for tower placement).
+     *
+     * @param position The position to check for tower placement
+     * @return true if a tower can be placed at the position, false otherwise
+     */
     private boolean canPlaceTower(Point position) {
         // Check if position is within bounds and on grass
         return position.x >= 0 && position.x < board.getWidth() &&

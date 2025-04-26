@@ -13,12 +13,34 @@ import java.io.Reader;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Loads and parses map layouts from JSON files for the Tower Defense game.
+ * <p>
+ * This class is responsible for reading map configurations, which define the arrangement
+ * of tiles (grass, path, water, etc.) that form the game board. It supports loading maps
+ * from external JSON files and provides fallback mechanisms for generating a default map
+ * when files cannot be accessed.
+ *
+ * @author feljo718
+ * @see Board
+ * @see TileType
+ */
 public class MapReader {
     private final String mapFile;
     private final TileType[][] map;
     private final int width;
     private final int height;
 
+    /**
+     * Creates a new map reader for the specified map file and dimensions.
+     * <p>
+     * Initializes the map array and immediately attempts to load the map data
+     * from the specified JSON file.
+     *
+     * @param mapFile The filename of the JSON map file to load
+     * @param width   The width of the map in tiles
+     * @param height  The height of the map in tiles
+     */
     public MapReader(String mapFile, int width, int height) {
         this.mapFile = mapFile;
         this.width = width;
@@ -27,6 +49,16 @@ public class MapReader {
         loadMapFromJson();
     }
 
+    /**
+     * Loads map data from the JSON file.
+     * <p>
+     * Attempts to read the map file from the following locations in order:
+     * <ol>
+     *   <li>The local resources directory</li>
+     *   <li>The application's classpath resources</li>
+     * </ol>
+     * Falls back to generating a default map if the file cannot be found or read.
+     */
     private void loadMapFromJson() {
         Gson gson = new Gson();
         Reader reader = null;
@@ -61,6 +93,21 @@ public class MapReader {
         }
     }
 
+    /**
+     * Parses the JSON map data into the tile grid.
+     * <p>
+     * Converts string representations in the JSON file to TileType enum values.
+     * The expected format uses single character codes to represent different tile types:
+     * <ul>
+     *   <li>G - Grass tile</li>
+     *   <li>P - Path tile</li>
+     *   <li>W - Water tile</li>
+     *   <li>S - Start tile</li>
+     *   <li>E - End tile</li>
+     * </ul>
+     *
+     * @param mapJson The parsed JSON object containing the map data
+     */
     private void parseMapJson(JsonObject mapJson) {
         Map<String, TileType> tileMap = new HashMap<>();
         tileMap.put("G", TileType.GRASS);
@@ -91,6 +138,13 @@ public class MapReader {
         }
     }
 
+    /**
+     * Creates a simple default map when the JSON file cannot be loaded.
+     * <p>
+     * Generates a map with a straight horizontal path in the middle row,
+     * with start and end points at opposite ends of this path. All other
+     * tiles are set to grass.
+     */
     private void generateDefaultMap() {
         // Fill entire map with grass
         for (int row = 0; row < map.length; row++) {

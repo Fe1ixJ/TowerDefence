@@ -10,6 +10,19 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * Main menu interface for the Tower Defense game.
+ * <p>
+ * This class manages the primary user interface before entering the game,
+ * providing options for starting a new game, selecting maps, configuring options,
+ * viewing high scores, and exiting the application.
+ * <p>
+ * The menu features a graphical background, styled buttons, and a responsive layout.
+ *
+ * @author feljo718
+ * @see Board
+ * @see TowerDefenceViewer
+ */
 public class MainMenu extends JFrame {
     private JPanel buttonPanel;
     private BufferedImage backgroundImage;
@@ -17,6 +30,12 @@ public class MainMenu extends JFrame {
     private final int WINDOW_HEIGHT = 600;
     private String selectedMap = "maps.json"; // Default map
 
+    /**
+     * Creates and initializes the main menu interface.
+     * <p>
+     * Sets up the window dimensions, loads graphical resources,
+     * initializes the background, and arranges UI components.
+     */
     public MainMenu() {
         setTitle("Tower Defence");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,6 +66,15 @@ public class MainMenu extends JFrame {
         createButtonPanel();
     }
 
+    /**
+     * Attempts to load the background image for the menu.
+     * <p>
+     * Searches for the background image in the following locations:
+     * <ol>
+     *   <li>The local resources directory</li>
+     *   <li>The application's classpath resources</li>
+     * </ol>
+     */
     private void loadBackgroundImage() {
         try {
             // Try to load from resources directory first
@@ -65,6 +93,12 @@ public class MainMenu extends JFrame {
         }
     }
 
+    /**
+     * Creates and configures the panel containing menu buttons.
+     * <p>
+     * Sets up the main navigation buttons with consistent styling and
+     * positions them in the center of the window. Also adds a title label.
+     */
     private void createButtonPanel() {
         buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayout(5, 1, 10, 20));
@@ -104,6 +138,15 @@ public class MainMenu extends JFrame {
         getContentPane().add(titleLabel);
     }
 
+    /**
+     * Creates a styled button with the given text using the menu's visual theme.
+     * <p>
+     * Applies consistent font, color, background, and border styling to maintain
+     * visual consistency across menu buttons.
+     *
+     * @param text The text to display on the button
+     * @return A styled JButton component
+     */
     private JButton createMenuButton(String text) {
         JButton button = new JButton(text);
         button.setFont(new Font("Arial", Font.BOLD, 16));
@@ -117,6 +160,12 @@ public class MainMenu extends JFrame {
         return button;
     }
 
+    /**
+     * Starts a new game session with the currently selected map.
+     * <p>
+     * Closes the menu window and initializes the game components
+     * including the board and viewer.
+     */
     private void startNewGame() {
         dispose(); // Close menu
 
@@ -128,6 +177,12 @@ public class MainMenu extends JFrame {
         });
     }
 
+    /**
+     * Displays a dialog for selecting the game map.
+     * <p>
+     * Allows the user to choose from available map options and
+     * stores the selection for use when starting a new game.
+     */
     private void selectMap() {
         String[] mapOptions = {"Default Map", "Forest Map", "Desert Map"};
         String selectedOption = (String) JOptionPane.showInputDialog(
@@ -160,11 +215,23 @@ public class MainMenu extends JFrame {
                 JOptionPane.INFORMATION_MESSAGE);
     }
 
+
     private void showHighScores() {
-        JOptionPane.showMessageDialog(this,
-                "High scores will be implemented in a future update.",
-                "High Scores",
-                JOptionPane.INFORMATION_MESSAGE);
+        try {
+            // Create a new highscore list, which will load existing scores
+            HighscoreList highscoreList = new HighscoreList();
+
+            // Display highscores in a dialog, similar to TowerDefenceViewer
+            JOptionPane.showMessageDialog(this,
+                    "Highscores:\n\n" + highscoreList.toString(),
+                    "Highscores",
+                    JOptionPane.INFORMATION_MESSAGE);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,
+                    "Failed to load highscores: " + e.getMessage(),
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     public static void main(String[] args) {

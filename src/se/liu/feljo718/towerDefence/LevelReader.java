@@ -13,9 +13,33 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Responsible for loading level configurations from external storage.
+ * <p>
+ * This class reads level data from a JSON file, parsing it into game Level objects.
+ * It provides fallback mechanisms if level files cannot be found or loaded,
+ * ensuring the game always has at least one playable level.
+ *
+ * @author feljo718
+ * @see Level
+ * @see Wave
+ * @see EnemyType
+ */
 public class LevelReader {
     private static final String LEVELS_FILE = "levels.json";
 
+    /**
+     * Loads level configurations from the levels.json file.
+     * <p>
+     * Attempts to load level data from the following locations in order:
+     * <ol>
+     *   <li>The classpath resources</li>
+     *   <li>The project's resources directory</li>
+     * </ol>
+     * Falls back to default levels if no file is found or an error occurs.
+     *
+     * @return A list of configured levels for the game
+     */
     public List<Level> loadLevels() {
         List<Level> levels = new ArrayList<>();
         Gson gson = new Gson();
@@ -61,6 +85,14 @@ public class LevelReader {
         return levels;
     }
 
+    /**
+     * Creates a set of default levels as a fallback when no levels file is available.
+     * <p>
+     * The default configuration includes a simple level with three waves of
+     * enemies of increasing difficulty.
+     *
+     * @return A list containing default level configurations
+     */
     private List<Level> createDefaultLevels() {
         System.out.println("Creating default levels as fallback");
         List<Level> levels = new ArrayList<>();
@@ -72,6 +104,14 @@ public class LevelReader {
         return levels;
     }
 
+    /**
+     * Converts a LevelData transfer object into a game Level object.
+     * <p>
+     * Maps the deserialized JSON data structure to the domain model used by the game.
+     *
+     * @param data The data transfer object containing level configuration
+     * @return A fully configured Level object
+     */
     private Level convertDataToLevel(LevelData data) {
         Level level = new Level(data.name, data.waveCooldown);
         for (WaveData waveData : data.waves) {
@@ -81,14 +121,21 @@ public class LevelReader {
         return level;
     }
 
-    // Data Transfer Objects for Gson deserialization
-    // These classes are instantiated by Gson through reflection
+    /**
+     * Data Transfer Object representing level configuration from JSON.
+     * <p>
+     * This class maps directly to the structure of the levels JSON file.
+     */
     private static class LevelData {
         private String name = "";
         private int waveCooldown = 0;
         private List<WaveData> waves = new ArrayList<>();
     }
-
+    /**
+     * Data Transfer Object representing wave configuration from JSON.
+     * <p>
+     * Contains the serialized properties for a single wave within a level.
+     */
     private static class WaveData {
         private String enemyType = "";
         private int count = 0;
