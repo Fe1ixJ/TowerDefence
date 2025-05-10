@@ -1,158 +1,1128 @@
 [
   {
-    "name": "Tutorial",
-    "waveCooldown": 3000,
+    "name": "First Steps",
+    "waveCooldown": 1500,
     "waves": [
       {
         "enemyType": "BASIC",
-        "count": 10,
-        "spawnDelay": 1000
-      }
-    ]
-  },
-  {
-    "name": "First Challenge",
-    "waveCooldown": 5000,
-    "waves": [
-      {
-        "enemyType": "BASIC",
-        "count": 15,
-        "spawnDelay": 800
-      },
-      {
-        "enemyType": "FAST",
         "count": 5,
         "spawnDelay": 600
       }
     ]
   },
   {
-    "name": "Mixed Threat",
-    "waveCooldown": 6000,
+    "name": "Double Trouble",
+    "waveCooldown": 1600,
     "waves": [
       {
         "enemyType": "BASIC",
-        "count": 20,
-        "spawnDelay": 700
+        "count": 6,
+        "spawnDelay": 550
+      },
+      {
+        "enemyType": "BASIC",
+        "count": 5,
+        "spawnDelay": 500
+      }
+    ]
+  },
+  {
+    "name": "Quick Attack",
+    "waveCooldown": 1600,
+    "waves": [
+      {
+        "enemyType": "BASIC",
+        "count": 8,
+        "spawnDelay": 450
       },
       {
         "enemyType": "FAST",
+        "count": 4,
+        "spawnDelay": 400
+      }
+    ]
+  },
+  {
+    "name": "Speed Test",
+    "waveCooldown": 1500,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 8,
+        "spawnDelay": 300
+      },
+      {
+        "enemyType": "BASIC",
+        "count": 6,
+        "spawnDelay": 400
+      }
+    ]
+  },
+  {
+    "name": "Heavy Front",
+    "waveCooldown": 1800,
+    "waves": [
+      {
+        "enemyType": "TANK",
+        "count": 3,
+        "spawnDelay": 700
+      },
+      {
+        "enemyType": "BASIC",
         "count": 10,
-        "spawnDelay": 500
+        "spawnDelay": 350
+      }
+    ]
+  },
+  {
+    "name": "Triple Threat",
+    "waveCooldown": 1600,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 6,
+        "spawnDelay": 250
+      },
+      {
+        "enemyType": "BASIC",
+        "count": 9,
+        "spawnDelay": 300
       },
       {
         "enemyType": "TANK",
         "count": 3,
-        "spawnDelay": 2000
+        "spawnDelay": 600
       }
     ]
   },
   {
-    "name": "Tank Brigade",
-    "waveCooldown": 8000,
+    "name": "Steady Advance",
+    "waveCooldown": 1500,
     "waves": [
       {
-        "enemyType": "FAST",
-        "count": 15,
+        "enemyType": "BASIC",
+        "count": 12,
+        "spawnDelay": 250
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 5,
+        "spawnDelay": 450
+      }
+    ]
+  },
+  {
+    "name": "Slow and Steady",
+    "waveCooldown": 1600,
+    "waves": [
+      {
+        "enemyType": "SLOW",
+        "count": 6,
         "spawnDelay": 400
       },
       {
         "enemyType": "TANK",
-        "count": 8,
-        "spawnDelay": 1500
+        "count": 4,
+        "spawnDelay": 550
       },
       {
         "enemyType": "BASIC",
-        "count": 25,
+        "count": 10,
+        "spawnDelay": 250
+      }
+    ]
+  },
+  {
+    "name": "Mix and Match",
+    "waveCooldown": 1600,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 9,
+        "spawnDelay": 220
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 6,
+        "spawnDelay": 350
+      },
+      {
+        "enemyType": "BASIC",
+        "count": 12,
+        "spawnDelay": 250
+      }
+    ]
+  },
+  {
+    "name": "Armored Division",
+    "waveCooldown": 1800,
+    "waves": [
+      {
+        "enemyType": "TANK",
+        "count": 7,
+        "spawnDelay": 450
+      },
+      {
+        "enemyType": "BASIC",
+        "count": 15,
+        "spawnDelay": 220
+      },
+      {
+        "enemyType": "TANK",
+        "count": 5,
+        "spawnDelay": 400
+      }
+    ]
+  },
+  {
+    "name": "First Boss",
+    "waveCooldown": 1700,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 15,
+        "spawnDelay": 220
+      },
+      {
+        "enemyType": "TANK",
+        "count": 10,
+        "spawnDelay": 300
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 2,
+        "spawnDelay": 1000
+      }
+    ]
+  },
+  {
+    "name": "Speed Rush",
+    "waveCooldown": 1400,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 24,
+        "spawnDelay": 160
+      },
+      {
+        "enemyType": "BASIC",
+        "count": 8,
+        "spawnDelay": 200
+      },
+      {
+        "enemyType": "FAST",
+        "count": 18,
+        "spawnDelay": 140
+      }
+    ]
+  },
+  {
+    "name": "Tank Battalion",
+    "waveCooldown": 1500,
+    "waves": [
+      {
+        "enemyType": "TANK",
+        "count": 14,
+        "spawnDelay": 320
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 12,
+        "spawnDelay": 230
+      },
+      {
+        "enemyType": "TANK",
+        "count": 10,
+        "spawnDelay": 290
+      }
+    ]
+  },
+  {
+    "name": "Turtle March",
+    "waveCooldown": 1400,
+    "waves": [
+      {
+        "enemyType": "SLOW",
+        "count": 18,
+        "spawnDelay": 230
+      },
+      {
+        "enemyType": "FAST",
+        "count": 15,
+        "spawnDelay": 170
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 16,
+        "spawnDelay": 200
+      }
+    ]
+  },
+  {
+    "name": "Boss Rush",
+    "waveCooldown": 1700,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 20,
+        "spawnDelay": 130
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 3,
+        "spawnDelay": 800
+      },
+      {
+        "enemyType": "TANK",
+        "count": 12,
+        "spawnDelay": 180
+      }
+    ]
+  },
+  {
+    "name": "Escalation",
+    "waveCooldown": 1500,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 28,
+        "spawnDelay": 140
+      },
+      {
+        "enemyType": "TANK",
+        "count": 14,
+        "spawnDelay": 220
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 12,
+        "spawnDelay": 200
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 2,
+        "spawnDelay": 700
+      }
+    ]
+  },
+  {
+    "name": "Four Fronts",
+    "waveCooldown": 1600,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 22,
+        "spawnDelay": 110
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 16,
+        "spawnDelay": 150
+      },
+      {
+        "enemyType": "TANK",
+        "count": 14,
+        "spawnDelay": 200
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 3,
+        "spawnDelay": 600
+      }
+    ]
+  },
+  {
+    "name": "Boss Sandwich",
+    "waveCooldown": 1700,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 24,
+        "spawnDelay": 120
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 2,
+        "spawnDelay": 700
+      },
+      {
+        "enemyType": "TANK",
+        "count": 18,
+        "spawnDelay": 150
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 2,
+        "spawnDelay": 700
+      },
+      {
+        "enemyType": "FAST",
+        "count": 20,
+        "spawnDelay": 110
+      }
+    ]
+  },
+  {
+    "name": "Heavy Infantry",
+    "waveCooldown": 1600,
+    "waves": [
+      {
+        "enemyType": "TANK",
+        "count": 18,
+        "spawnDelay": 230
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 15,
+        "spawnDelay": 200
+      },
+      {
+        "enemyType": "TANK",
+        "count": 14,
+        "spawnDelay": 220
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 14,
+        "spawnDelay": 190
+      }
+    ]
+  },
+  {
+    "name": "Lightning Strike",
+    "waveCooldown": 1300,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 34,
+        "spawnDelay": 80
+      },
+      {
+        "enemyType": "FAST",
+        "count": 30,
+        "spawnDelay": 75
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 3,
         "spawnDelay": 500
       }
     ]
   },
   {
-    "name": "Speed Demons",
-    "waveCooldown": 10000,
+    "name": "Tank Vanguard",
+    "waveCooldown": 1600,
     "waves": [
       {
-        "enemyType": "FAST",
-        "count": 30,
-        "spawnDelay": 300
+        "enemyType": "TANK",
+        "count": 16,
+        "spawnDelay": 230
       },
       {
-        "enemyType": "BASIC",
-        "count": 15,
-        "spawnDelay": 600
+        "enemyType": "FAST",
+        "count": 25,
+        "spawnDelay": 90
       },
       {
         "enemyType": "TANK",
-        "count": 5,
-        "spawnDelay": 1200
+        "count": 14,
+        "spawnDelay": 210
       },
       {
-        "enemyType": "FAST",
-        "count": 20,
-        "spawnDelay": 200
+        "enemyType": "BOSS",
+        "count": 4,
+        "spawnDelay": 500
       }
     ]
   },
   {
-    "name": "Overwhelming Force",
-    "waveCooldown": 12000,
+    "name": "Triple Boss",
+    "waveCooldown": 1800,
     "waves": [
       {
-        "enemyType": "BASIC",
+        "enemyType": "FAST",
+        "count": 30,
+        "spawnDelay": 85
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 4,
+        "spawnDelay": 650
+      },
+      {
+        "enemyType": "TANK",
+        "count": 16,
+        "spawnDelay": 120
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 2,
+        "spawnDelay": 600
+      }
+    ]
+  },
+  {
+    "name": "Mixed Forces",
+    "waveCooldown": 1500,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 36,
+        "spawnDelay": 80
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 18,
+        "spawnDelay": 150
+      },
+      {
+        "enemyType": "TANK",
+        "count": 18,
+        "spawnDelay": 170
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 4,
+        "spawnDelay": 450
+      }
+    ]
+  },
+  {
+    "name": "Swarm Tactics",
+    "waveCooldown": 1400,
+    "waves": [
+      {
+        "enemyType": "FAST",
         "count": 40,
+        "spawnDelay": 70
+      },
+      {
+        "enemyType": "FAST",
+        "count": 38,
+        "spawnDelay": 65
+      },
+      {
+        "enemyType": "TANK",
+        "count": 14,
+        "spawnDelay": 140
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 3,
+        "spawnDelay": 500
+      }
+    ]
+  },
+  {
+    "name": "Siege Engines",
+    "waveCooldown": 1700,
+    "waves": [
+      {
+        "enemyType": "SLOW",
+        "count": 22,
+        "spawnDelay": 160
+      },
+      {
+        "enemyType": "TANK",
+        "count": 22,
+        "spawnDelay": 190
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 4,
+        "spawnDelay": 700
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 18,
+        "spawnDelay": 150
+      }
+    ]
+  },
+  {
+    "name": "Wave Assault",
+    "waveCooldown": 1400,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 32,
+        "spawnDelay": 80
+      },
+      {
+        "enemyType": "TANK",
+        "count": 20,
+        "spawnDelay": 120
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 4,
+        "spawnDelay": 450
+      },
+      {
+        "enemyType": "FAST",
+        "count": 28,
+        "spawnDelay": 75
+      }
+    ]
+  },
+  {
+    "name": "Slow Parade",
+    "waveCooldown": 1500,
+    "waves": [
+      {
+        "enemyType": "SLOW",
+        "count": 26,
+        "spawnDelay": 150
+      },
+      {
+        "enemyType": "FAST",
+        "count": 32,
+        "spawnDelay": 100
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 22,
+        "spawnDelay": 140
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 3,
+        "spawnDelay": 550
+      }
+    ]
+  },
+  {
+    "name": "Boss Brigade",
+    "waveCooldown": 1800,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 34,
+        "spawnDelay": 80
+      },
+      {
+        "enemyType": "TANK",
+        "count": 24,
+        "spawnDelay": 120
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 6,
+        "spawnDelay": 500
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 20,
+        "spawnDelay": 110
+      }
+    ]
+  },
+  {
+    "name": "All In",
+    "waveCooldown": 1600,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 38,
+        "spawnDelay": 70
+      },
+      {
+        "enemyType": "TANK",
+        "count": 24,
+        "spawnDelay": 140
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 22,
+        "spawnDelay": 130
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 5,
+        "spawnDelay": 550
+      },
+      {
+        "enemyType": "FAST",
+        "count": 25,
+        "spawnDelay": 65
+      }
+    ]
+  },
+  {
+    "name": "Fast Forward",
+    "waveCooldown": 1300,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 50,
+        "spawnDelay": 55
+      },
+      {
+        "enemyType": "FAST",
+        "count": 45,
+        "spawnDelay": 50
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 4,
+        "spawnDelay": 450
+      }
+    ]
+  },
+  {
+    "name": "Heavy Metal",
+    "waveCooldown": 1700,
+    "waves": [
+      {
+        "enemyType": "TANK",
+        "count": 26,
+        "spawnDelay": 160
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 28,
+        "spawnDelay": 140
+      },
+      {
+        "enemyType": "TANK",
+        "count": 24,
+        "spawnDelay": 150
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 6,
+        "spawnDelay": 450
+      }
+    ]
+  },
+  {
+    "name": "Tidal Wave",
+    "waveCooldown": 1400,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 48,
+        "spawnDelay": 65
+      },
+      {
+        "enemyType": "TANK",
+        "count": 30,
+        "spawnDelay": 90
+      },
+      {
+        "enemyType": "FAST",
+        "count": 42,
+        "spawnDelay": 60
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 5,
+        "spawnDelay": 400
+      }
+    ]
+  },
+  {
+    "name": "Juggernaut",
+    "waveCooldown": 1800,
+    "waves": [
+      {
+        "enemyType": "TANK",
+        "count": 32,
+        "spawnDelay": 140
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 26,
+        "spawnDelay": 120
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 7,
+        "spawnDelay": 450
+      },
+      {
+        "enemyType": "TANK",
+        "count": 24,
+        "spawnDelay": 130
+      }
+    ]
+  },
+  {
+    "name": "Overwhelming Odds",
+    "waveCooldown": 1500,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 46,
+        "spawnDelay": 65
+      },
+      {
+        "enemyType": "TANK",
+        "count": 28,
+        "spawnDelay": 130
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 28,
+        "spawnDelay": 110
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 6,
+        "spawnDelay": 400
+      }
+    ]
+  },
+  {
+    "name": "Boss Battle",
+    "waveCooldown": 1800,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 40,
+        "spawnDelay": 75
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 9,
         "spawnDelay": 400
       },
       {
         "enemyType": "TANK",
-        "count": 15,
-        "spawnDelay": 1000
-      },
-      {
-        "enemyType": "FAST",
-        "count": 25,
-        "spawnDelay": 300
-      },
-      {
-        "enemyType": "TANK",
-        "count": 10,
-        "spawnDelay": 800
-      },
-      {
-        "enemyType": "BASIC",
-        "count": 30,
-        "spawnDelay": 200
+        "count": 35,
+        "spawnDelay": 100
       }
     ]
   },
   {
-    "name": "Final Assault",
-    "waveCooldown": 15000,
+    "name": "Maximum Threat",
+    "waveCooldown": 1600,
+    "waves": [
+      {
+        "enemyType": "TANK",
+        "count": 32,
+        "spawnDelay": 120
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 32,
+        "spawnDelay": 110
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 7,
+        "spawnDelay": 450
+      },
+      {
+        "enemyType": "FAST",
+        "count": 42,
+        "spawnDelay": 70
+      }
+    ]
+  },
+  {
+    "name": "Speed Challenge",
+    "waveCooldown": 1300,
     "waves": [
       {
         "enemyType": "FAST",
-        "count": 40,
-        "spawnDelay": 200
+        "count": 60,
+        "spawnDelay": 45
       },
       {
         "enemyType": "TANK",
         "count": 25,
-        "spawnDelay": 800
-      },
-      {
-        "enemyType": "BASIC",
-        "count": 50,
-        "spawnDelay": 300
-      },
-      {
-        "enemyType": "TANK",
-        "count": 15,
-        "spawnDelay": 600
+        "spawnDelay": 80
       },
       {
         "enemyType": "FAST",
+        "count": 50,
+        "spawnDelay": 40
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 5,
+        "spawnDelay": 350
+      }
+    ]
+  },
+  {
+    "name": "Armor Challenge",
+    "waveCooldown": 1700,
+    "waves": [
+      {
+        "enemyType": "TANK",
+        "count": 36,
+        "spawnDelay": 110
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 36,
+        "spawnDelay": 100
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 10,
+        "spawnDelay": 400
+      },
+      {
+        "enemyType": "TANK",
+        "count": 30,
+        "spawnDelay": 100
+      }
+    ]
+  },
+  {
+    "name": "Mixed Mayhem",
+    "waveCooldown": 1500,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 54,
+        "spawnDelay": 65
+      },
+      {
+        "enemyType": "TANK",
+        "count": 32,
+        "spawnDelay": 110
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 32,
+        "spawnDelay": 100
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 8,
+        "spawnDelay": 350
+      },
+      {
+        "enemyType": "FAST",
+        "count": 40,
+        "spawnDelay": 60
+      }
+    ]
+  },
+  {
+    "name": "Double Trouble++",
+    "waveCooldown": 1400,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 55,
+        "spawnDelay": 55
+      },
+      {
+        "enemyType": "TANK",
         "count": 35,
-        "spawnDelay": 150
+        "spawnDelay": 85
+      },
+      {
+        "enemyType": "FAST",
+        "count": 45,
+        "spawnDelay": 50
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 8,
+        "spawnDelay": 350
+      }
+    ]
+  },
+  {
+    "name": "Tank Apocalypse",
+    "waveCooldown": 1700,
+    "waves": [
+      {
+        "enemyType": "TANK",
+        "count": 45,
+        "spawnDelay": 100
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 38,
+        "spawnDelay": 90
+      },
+      {
+        "enemyType": "TANK",
+        "count": 35,
+        "spawnDelay": 90
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 8,
+        "spawnDelay": 380
+      }
+    ]
+  },
+  {
+    "name": "Slow Motion",
+    "waveCooldown": 1500,
+    "waves": [
+      {
+        "enemyType": "SLOW",
+        "count": 46,
+        "spawnDelay": 85
+      },
+      {
+        "enemyType": "TANK",
+        "count": 40,
+        "spawnDelay": 95
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 36,
+        "spawnDelay": 80
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 7,
+        "spawnDelay": 400
+      }
+    ]
+  },
+  {
+    "name": "The Guardians",
+    "waveCooldown": 1800,
+    "waves": [
+      {
+        "enemyType": "BOSS",
+        "count": 8,
+        "spawnDelay": 450
+      },
+      {
+        "enemyType": "FAST",
+        "count": 50,
+        "spawnDelay": 60
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 10,
+        "spawnDelay": 350
+      },
+      {
+        "enemyType": "TANK",
+        "count": 35,
+        "spawnDelay": 90
+      }
+    ]
+  },
+  {
+    "name": "Grand Assault",
+    "waveCooldown": 1600,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 60,
+        "spawnDelay": 50
+      },
+      {
+        "enemyType": "TANK",
+        "count": 40,
+        "spawnDelay": 90
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 35,
+        "spawnDelay": 80
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 10,
+        "spawnDelay": 320
+      },
+      {
+        "enemyType": "FAST",
+        "count": 45,
+        "spawnDelay": 45
+      }
+    ]
+  },
+  {
+    "name": "The Elder Boss",
+    "waveCooldown": 1800,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 55,
+        "spawnDelay": 60
+      },
+      {
+        "enemyType": "TANK",
+        "count": 45,
+        "spawnDelay": 90
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 12,
+        "spawnDelay": 300
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 38,
+        "spawnDelay": 80
+      }
+    ]
+  },
+  {
+    "name": "The Final Challenge",
+    "waveCooldown": 1700,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 65,
+        "spawnDelay": 45
+      },
+      {
+        "enemyType": "TANK",
+        "count": 45,
+        "spawnDelay": 80
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 40,
+        "spawnDelay": 75
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 14,
+        "spawnDelay": 250
+      },
+      {
+        "enemyType": "FAST",
+        "count": 50,
+        "spawnDelay": 40
+      }
+    ]
+  },
+  {
+    "name": "Endless Mode",
+    "waveCooldown": 1600,
+    "waves": [
+      {
+        "enemyType": "FAST",
+        "count": 75,
+        "spawnDelay": 40
+      },
+      {
+        "enemyType": "TANK",
+        "count": 60,
+        "spawnDelay": 65
+      },
+      {
+        "enemyType": "SLOW",
+        "count": 50,
+        "spawnDelay": 60
+      },
+      {
+        "enemyType": "BOSS",
+        "count": 18,
+        "spawnDelay": 220
+      },
+      {
+        "enemyType": "FAST",
+        "count": 60,
+        "spawnDelay": 35
       }
     ]
   }

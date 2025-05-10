@@ -1,9 +1,4 @@
-Ljud effekter typ samt visualisering av skott och skada
-
-Fler banor
-Flera Tower typer
-Flera fiender typer
-Balansera spelet
+Fix JavaDocs
 
 Different tower types though abstract class tower, To remove polymorphism
 Update grafics for towers and enemies
